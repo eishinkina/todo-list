@@ -1,0 +1,40 @@
+.Header {
+  // ...
+  // ...
+  background-color: var(--ui-g-0);
+  z-index: 1;
+  &.isFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  svg,
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}
+
+.HeaderList {
+  display: flex;
+  // ...
+
+  a {
+    text-decoration: solid;
+
+    &.active {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+  }
+}
