@@ -24,7 +24,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
-    "uimini": "^2.0.7"
+    "uimini": "^2.0.7",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",

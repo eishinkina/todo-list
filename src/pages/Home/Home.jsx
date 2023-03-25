@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 
 import { Container } from '../../layouts'
 
-const Form = () => {
+import { v4 as fakeId } from 'uuid'
+
+const Form = ({onSubmit}) => {
   const [title, setTitle] = useState('')
 
   const handleSubmit = () => {
@@ -12,8 +14,15 @@ const Form = () => {
       return
     }
 
-    console.log('submitted: ' + title)
+    // console.log('submitted: ' + title)
 
+    const item = {
+      id: fakeId(),
+      title: title,
+
+    }
+
+    onSubmit(item)
     ///reset
     setTitle('')
   }
@@ -32,9 +41,18 @@ const Form = () => {
 }
 
 const HomePage = () => {
+
+  const array = [];
+
+  const handleSubmit = (item) =>{
+    // console.log('submitted: ' + item);
+    array.push(item);
+    console.log(array);
+  }
+
   return (
     <Container>
-      <Form />
+      <Form onSubmit={handleSubmit} />
     </Container>
   )
 }
