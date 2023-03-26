@@ -17,6 +17,7 @@ const Form = ({ onSubmit }) => {
     const item = {
       id: fakeId(),
       title: title,
+      isChecked: false,
     }
 
     onSubmit(item)
@@ -25,7 +26,7 @@ const Form = ({ onSubmit }) => {
   }
 
   return (
-    <form className='view-sm flex items-end' onSubmit={handleSubmit}>
+    <form className='view-sm flex items-end mb-4' onSubmit={handleSubmit}>
       <div className='ui-input' style={{ width: '100%' }}>
         <label htmlFor='input-DqS1'>Enter Todo</label>
         <input
