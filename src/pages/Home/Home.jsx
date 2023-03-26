@@ -4,7 +4,7 @@ import { Container } from '../../layouts'
 
 import { v4 as fakeId } from 'uuid'
 
-const Form = ({onSubmit}) => {
+const Form = ({ onSubmit }) => {
   const [title, setTitle] = useState('')
 
   const handleSubmit = () => {
@@ -19,7 +19,6 @@ const Form = ({onSubmit}) => {
     const item = {
       id: fakeId(),
       title: title,
-
     }
 
     onSubmit(item)
@@ -41,14 +40,13 @@ const Form = ({onSubmit}) => {
 }
 
 const HomePage = () => {
-
-  const array = [];
-
-  const handleSubmit = (item) =>{
-    // console.log('submitted: ' + item);
-    array.push(item);
-    console.log(array);
+  const [items, setItems] = useState([])
+  const handleSubmit = (item) => {
+    const nextItems = [...items, item];
+    setItems(nextItems);
   }
+
+  React.useEffect(() => console.log(items), [items]);
 
   return (
     <Container>
