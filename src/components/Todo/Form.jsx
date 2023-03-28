@@ -9,7 +9,7 @@ const Form = ({ onSubmit }) => {
   const [activeTag, setActiveTag] = useState([])
 
   const onItemsClick = (text) => {
-    console.log(text)
+    // console.log(text)
     setActiveTag(
       activeTag.indexOf(text) === -1
         ? [...activeTag, text]
