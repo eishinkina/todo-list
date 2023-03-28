@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, List } from '../../components/Todo/'
+import { Form, List, Tags } from '../../components/Todo/'
 import { Container } from '../../layouts'
 import todos from '../../seeders/todos.json'
 
@@ -18,7 +18,7 @@ const HomePage = () => {
     setItems(nextItems)
   }
 
-//update
+  //update
   const handleChangeItem = (id) => {
     const nextItems = items.map((el) =>
       el.id == id ? { ...el, isChecked: !el.isChecked } : el
@@ -33,7 +33,6 @@ const HomePage = () => {
     // console.log(indexForRemove)
     nextItems.splice(indexForRemove, 1)
     setItems(nextItems)
-
   }
 
   React.useEffect(() => {
@@ -43,12 +42,16 @@ const HomePage = () => {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit} />
-      <List
-        items={items}
-        onChangeItem={handleChangeItem}
-        onRemoveItem={handleRemoveItem}
-      />
+      <div className='view-wrapper'>
+        <div className='view-content'>
+          <Form onSubmit={handleSubmit} />
+          <List
+            items={items}
+            onChangeItem={handleChangeItem}
+            onRemoveItem={handleRemoveItem}
+          />
+        </div>
+      </div>
     </Container>
   )
 }

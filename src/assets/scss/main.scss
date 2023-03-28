@@ -17,3 +17,14 @@
 
 // import helpers
 @import './helpers/_helpers';
+
+.mb-8 {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+  color: #4081bf;
+  font-size: 14px;
+}
