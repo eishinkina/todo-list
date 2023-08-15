@@ -6,7 +6,7 @@ import './assets/scss/main.scss'
 // pages:
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
-import NotFoundPage from './pages/NotFound'
+// import NotFoundPage from './pages/NotFound'
 
 // components:
 import { Header, Footer } from './components'
@@ -19,7 +19,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
-          <Route path='*' element={<NotFoundPage />} />
+          <Route path='*' element={<HomePage />} />
         </Routes>
       </div>
       <Footer />

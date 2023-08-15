@@ -2,7 +2,10 @@
   "name": "todo-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eishinkina.github.io/todo-list",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
